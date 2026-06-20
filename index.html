@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sunny Coffee</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script>
+      if (sessionStorage.getItem("isLoggedIn") !== "true") {
+        alert("Vui lòng đăng nhập thông tin để truy cập website Sunny Coffee!");
+        window.location.href = "login.html";
+      }
+    </script>
   </head>
   <body>
     <div class="container">

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunny Coffee - Đăng Nhập & Đăng Ký</title>
+    <link rel="stylesheet" href="./css/style-login.css" />
+    <!-- <script src="./Js/login.js" /> -->
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-header">
+        <div class="logo">☀️ Sunny Coffee</div>
+        <h2>ĐĂNG NHẬP THÀNH VIÊN</h2>
+        <p>Vui lòng điền thông tin để khám phá không gian Sunny Coffee</p>
+      </div>
+
+      <form id="loginForm">
+        <!-- <div class="form-group">
+          <label for="name">Họ và tên <span class="required">*</span></label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Nhập họ và tên của bạn"
+            required
+          />
+        </div> -->
+
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input
+            type="email"
+            id="email"
+            placeholder="example@gmail.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone"
+            >Số điện thoại <span class="required">*</span></label
+          >
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Nhập số điện thoại của bạn"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="city"
+            >Thành phố / Khu vực <span class="required">*</span></label
+          >
+          <select id="city" required>
+            <option value="" disabled selected>
+              -- Chọn khu vực của bạn --
+            </option>
+            <option value="Hồ Chí Minh">TP. Hồ Chí Minh</option>
+            <option value="Hà Nội">Hà Nội</option>
+            <option value="Đà Nẵng">Đà Nẵng</option>
+            <option value="Cần Thơ">Cần Thơ</option>
+            <option value="Hải Phòng">Hải Phòng</option>
+          </select>
+        </div>
+
+        <!-- <div class="form-group">
+          <label for="message">Lời nhắn / Ghi chú</label>
+          <textarea
+            id="message"
+            rows="3"
+            placeholder="Lời nhắn hoặc yêu cầu đặc biệt của bạn..."
+          ></textarea>
+        </div> -->
+
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">Đăng Nhập</button>
+          <button type="reset" class="btn-reset">Nhập Lại</button>
+        </div>
+      </form>
+      <div id="alertMessage" class="alert-message"></div>
+    </div>
+
+    <scrip src="./db/users.json"></scrip>
+    <script src="./Js/login.js"></script>
+  </body>
+</html>
