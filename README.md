@@ -1,14 +1,14 @@
-# 🔐 Account Login
+# Account Login
 
-Đăng nhập chỉ sử dụng **Name**, **Email** và **City**.
+Đăng nhập chỉ sử dụng **Phone**, **Email** và **City**.
 
 ## Sample Accounts
 
-| Name            | Email                                         | City        |
+| Phone           | Email                                         | City        |
 | --------------- | --------------------------------------------- | ----------- |
-| admin           | [admin@gmail.com](mailto:admin@gmail.com)     | Hồ Chí Minh |
-| Admin Sunny     | [admin@sunny.com](mailto:admin@sunny.com)     | Hồ Chí Minh |
-| Nguyễn Văn Cafe | [vancafe@gmail.com](mailto:vancafe@gmail.com) | Hà Nội      |
+| 0123456789      | [admin@gmail.com](mailto:admin@gmail.com)     | Hồ Chí Minh |
+| 0987654321      | [admin@sunny.com](mailto:admin@sunny.com)     | Hồ Chí Minh |
+| 0901234567      | [vancafe@gmail.com](mailto:vancafe@gmail.com) | Hà Nội      |
 
 ---
 
@@ -17,17 +17,17 @@
 ```json
 [
   {
-    "name": "admin",
+    "phone": "0123456789",
     "email": "admin@gmail.com",
     "city": "Hồ Chí Minh"
   },
   {
-    "name": "Admin Sunny",
+    "phone": "0987654321",
     "email": "admin@sunny.com",
     "city": "Hồ Chí Minh"
   },
   {
-    "name": "Nguyễn Văn Cafe",
+    "phone": "0901234567",
     "email": "vancafe@gmail.com",
     "city": "Hà Nội"
   }
@@ -38,8 +38,7 @@
 
 ## Login Rule
 
-* ✅ Use **Name** to display user information.
-* ✅ Use **Email** as unique identifier.
-* ✅ Use **City** for filtering/searching.
-* ❌ Do **not** use `phone`.
-* ❌ Do **not** use `message`.
+* V Use **Phone** to display user information.
+* V Use **Email** as unique identifier.
+* V Use **City** for filtering/searching.
+* X Do **not** use `name`. And `message`.
