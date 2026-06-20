@@ -1,3 +1,4 @@
+// 1. Khai báo dữ liệu JSON cứng bạn cung cấp (Đóng vai trò là Database gốc)
 const defaultUsers = [
   {
     name: "admin",
