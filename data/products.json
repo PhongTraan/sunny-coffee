@@ -6,7 +6,7 @@
     "image": "images/b1.jpg",
     "category": "banh-flan-gato",
     "categoryName": "Bánh Flan Gato",
-    "description": "Bánh Thiên Nga là sự kết hợp hài hòa giữa lớp flan mềm mịn và cốt bánh gato chocolate xốp nhẹ. Hương vị béo ngậy của sữa, vị ngọt thanh cùng dâu tây tươi trang trí tạo nên chiếc bánh vừa đẹp mắt vừa thơm ngon. Phù hợp cho các buổi tiệc sinh nhật, kỷ niệm hoặc làm món quà ý nghĩa dành tặng người thân."
+    "description": "Bánh flan gato mềm mịn với lớp flan béo ngậy và cốt bánh chocolate thơm ngon."
   },
   {
     "id": 2,
@@ -15,43 +15,43 @@
     "image": "images/a11.jpg",
     "category": "banh-flan-gato",
     "categoryName": "Bánh Flan Gato",
-    "description": "Harvest Bloom mang phong cách hiện đại với lớp kem tươi mịn màng, cốt bánh mềm xốp và hương vani dịu nhẹ. Bánh được trang trí tinh tế bằng trái cây tươi theo mùa, mang đến cảm giác thanh mát và ngọt ngào. Đây là lựa chọn lý tưởng cho những buổi gặp gỡ gia đình hoặc tiệc trà cuối tuần."
+    "description": "Chiếc bánh được trang trí trái cây tươi cùng lớp kem mịn và cốt bánh mềm xốp."
   },
   {
     "id": 3,
-    "name": "Bánh Thiên Nga",
-    "price": 575000,
+    "name": "Chocolate Swan",
+    "price": 585000,
     "image": "images/b2.jpg",
     "category": "banh-flan-gato",
     "categoryName": "Bánh Flan Gato",
-    "description": "Phiên bản Bánh Thiên Nga nổi bật với lớp kem phủ mượt mà, cốt bánh chocolate mềm ẩm và hương cacao thơm nhẹ. Từng lớp bánh hòa quyện cùng flan béo ngậy tạo nên hương vị cân bằng, không quá ngọt. Sản phẩm thích hợp cho những dịp đặc biệt hoặc làm món tráng miệng sang trọng."
+    "description": "Bánh chocolate kết hợp flan truyền thống mang đến hương vị ngọt dịu."
   },
   {
     "id": 4,
-    "name": "Harvest Bloom",
-    "price": 535000,
+    "name": "Sweet Garden",
+    "price": 540000,
     "image": "images/b4.jpg",
     "category": "banh-flan-gato",
     "categoryName": "Bánh Flan Gato",
-    "description": "Harvest Bloom là chiếc bánh mang vẻ đẹp nhẹ nhàng với lớp kem tươi mịn, cốt gato mềm và vị ngọt thanh. Mỗi chiếc bánh đều được hoàn thiện thủ công, kết hợp cùng trái cây tươi giúp hương vị thêm cân bằng. Đây là món quà tuyệt vời cho sinh nhật, lễ kỷ niệm hoặc các dịp sum họp."
+    "description": "Bánh gato phủ kem tươi với phong cách trang trí hiện đại."
   },
   {
     "id": 5,
-    "name": "Bánh Thiên Nga",
-    "price": 575000,
+    "name": "Royal Flan",
+    "price": 590000,
     "image": "images/b5.jpg",
     "category": "banh-flan-gato",
     "categoryName": "Bánh Flan Gato",
-    "description": "Bánh Thiên Nga chinh phục thực khách bởi lớp flan mịn tan trong miệng kết hợp cùng cốt bánh chocolate mềm xốp. Hương vị đậm đà nhưng không ngấy, điểm nhấn là lớp kem tươi và trái cây trang trí bắt mắt. Chiếc bánh mang đến trải nghiệm ngọt ngào cho mọi bữa tiệc."
+    "description": "Flan mềm mịn kết hợp cốt bánh cacao tạo nên hương vị khó quên."
   },
   {
     "id": 6,
-    "name": "Harvest Bloom",
-    "price": 535000,
+    "name": "Golden Harvest",
+    "price": 545000,
     "image": "images/b6.jpg",
     "category": "banh-flan-gato",
     "categoryName": "Bánh Flan Gato",
-    "description": "Harvest Bloom sở hữu thiết kế thanh lịch cùng lớp kem béo nhẹ và cốt bánh mềm mịn. Sự kết hợp giữa nguyên liệu tươi ngon và cách trang trí tinh tế tạo nên chiếc bánh vừa đẹp mắt vừa thơm ngon. Thích hợp dùng trong các dịp sinh nhật, tiệc gia đình hoặc làm quà tặng."
+    "description": "Chiếc bánh thanh lịch với lớp kem béo nhẹ và trái cây tươi."
   },
   {
     "id": 7,
@@ -60,6 +60,123 @@
     "image": "images/a12.jpg",
     "category": "mousse",
     "categoryName": "Bánh Mousse",
-    "description": "Mousse Kiwi được làm từ lớp mousse mềm mịn hòa quyện cùng vị chua ngọt tự nhiên của kiwi tươi. Cốt bánh mềm kết hợp với kem mousse mát lạnh mang đến cảm giác thanh nhẹ, dễ ăn và không gây ngấy. Đây là lựa chọn hoàn hảo cho những ai yêu thích các món tráng miệng trái cây tươi mát."
+    "description": "Mousse kiwi chua ngọt kết hợp kem mịn và cốt bánh mềm."
+  },
+  {
+    "id": 8,
+    "name": "Chocolate Mousse",
+    "price": 435000,
+    "image": "images/A10.jpg",
+    "category": "mousse",
+    "categoryName": "Bánh Mousse",
+    "description": "Mousse chocolate đậm vị cacao dành cho người yêu chocolate."
+  },
+  {
+    "id": 9,
+    "name": "Berry Mousse",
+    "price": 445000,
+    "image": "images/a7.jpg",
+    "category": "mousse",
+    "categoryName": "Bánh Mousse",
+    "description": "Mousse berry thơm mát với vị chua nhẹ từ các loại quả mọng."
+  },
+  {
+    "id": 10,
+    "name": "Sweet Vanilla",
+    "price": 620000,
+    "image": "images/a1.jpg",
+    "category": "birthday-cake",
+    "categoryName": "Bánh Sinh Nhật",
+    "description": "Bánh sinh nhật vani mềm xốp phủ kem tươi."
+  },
+  {
+    "id": 11,
+    "name": "Chocolate Dream",
+    "price": 650000,
+    "image": "images/a2.jpg",
+    "category": "birthday-cake",
+    "categoryName": "Bánh Sinh Nhật",
+    "description": "Bánh chocolate sang trọng dành cho các buổi tiệc sinh nhật."
+  },
+  {
+    "id": 12,
+    "name": "Fresh Fruit Cake",
+    "price": 670000,
+    "image": "images/a3.jpg",
+    "category": "birthday-cake",
+    "categoryName": "Bánh Sinh Nhật",
+    "description": "Bánh kem trái cây tươi với vị ngọt thanh."
+  },
+  {
+    "id": 13,
+    "name": "White Blossom",
+    "price": 630000,
+    "image": "images/A4.webp",
+    "category": "birthday-cake",
+    "categoryName": "Bánh Sinh Nhật",
+    "description": "Chiếc bánh mang phong cách tối giản, tinh tế và sang trọng."
+  },
+  {
+    "id": 14,
+    "name": "Coffee Espresso",
+    "price": 45000,
+    "image": "images/cf1.jpg",
+    "category": "coffee",
+    "categoryName": "Coffee",
+    "description": "Espresso nguyên chất với hương thơm nồng và vị đậm."
+  },
+  {
+    "id": 15,
+    "name": "Cappuccino",
+    "price": 55000,
+    "image": "images/cf2.webp",
+    "category": "coffee",
+    "categoryName": "Coffee",
+    "description": "Cappuccino kết hợp espresso cùng lớp bọt sữa mịn."
+  },
+  {
+    "id": 16,
+    "name": "Latte",
+    "price": 60000,
+    "image": "images/cf3.avif",
+    "category": "coffee",
+    "categoryName": "Coffee",
+    "description": "Latte béo nhẹ với sữa nóng và espresso."
+  },
+  {
+    "id": 17,
+    "name": "Peach Tea",
+    "price": 55000,
+    "image": "images/n1.jpg",
+    "category": "juice",
+    "categoryName": "Nước Ép & Trà",
+    "description": "Trà đào thanh mát với miếng đào tươi."
+  },
+  {
+    "id": 18,
+    "name": "Lychee Tea",
+    "price": 52000,
+    "image": "images/n2.png",
+    "category": "juice",
+    "categoryName": "Nước Ép & Trà",
+    "description": "Trà vải thơm dịu, giải nhiệt ngày hè."
+  },
+  {
+    "id": 19,
+    "name": "Orange Juice",
+    "price": 50000,
+    "image": "images/n3.jpg",
+    "category": "juice",
+    "categoryName": "Nước Ép & Trà",
+    "description": "Nước ép cam nguyên chất giàu vitamin C."
+  },
+  {
+    "id": 20,
+    "name": "Mixed Fruit Juice",
+    "price": 58000,
+    "image": "images/n4.jpg",
+    "category": "juice",
+    "categoryName": "Nước Ép & Trà",
+    "description": "Nước ép trái cây tổng hợp tươi mát và bổ dưỡng."
   }
 ]
