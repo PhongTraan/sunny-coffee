@@ -1,127 +1,115 @@
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
+let productsData = [];
 
 fetch("data/products.json")
   .then((res) => res.json())
   .then((products) => {
-    let html = "";
+    productsData = products;
+    renderCart();
+  });
 
-    let total = 0;
+function renderCart() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    cart.forEach((item) => {
-      const product = products.find((p) => p.id === item.id);
+  let html = "";
+  let total = 0;
 
-      const subTotal = product.price * item.quantity;
+  cart.forEach((item) => {
+    const product = productsData.find((p) => p.id === item.id);
 
-      total += subTotal;
-      html += `
-        <div class="cart-item">
+    if (!product) return;
+
+    const subTotal = product.price * item.quantity;
+
+    total += subTotal;
+
+    html += `
+      <div class="cart-item">
 
         <img src="${product.image}" class="cart-image">
 
         <div class="cart-info">
 
-        <h3>${product.name}</h3>
+          <h3>${product.name}</h3>
 
-        <p class="price">
-        Đơn giá:
-        ${product.price.toLocaleString("vi-VN")} đ
-        </p>
+          <p class="price">
+            Đơn giá:
+            ${product.price.toLocaleString("vi-VN")} đ
+          </p>
 
-        <div class="qty">
+          <div class="qty">
 
-        <button onclick="changeQuantity(${product.id},-1)">−</button>
+            <button onclick="changeQuantity(${product.id},-1)">−</button>
 
-        <span>${item.quantity}</span>
+            <span>${item.quantity}</span>
 
-        <button onclick="changeQuantity(${product.id},1)">+</button>
+            <button onclick="changeQuantity(${product.id},1)">+</button>
 
-        </div>
+          </div>
 
-        <p class="subtotal">
-
-        ${subTotal.toLocaleString("vi-VN")} đ
-
-        </p>
+          <p class="subtotal">
+            ${subTotal.toLocaleString("vi-VN")} đ
+          </p>
 
         </div>
 
         <button class="delete-btn"
-
-        onclick="removeItem(${product.id})">
-
-        🗑 Xóa
-
+                onclick="removeItem(${product.id})">
+          🗑 Xóa
         </button>
 
-        </div>
-        `;
-    });
+      </div>
+    `;
+  });
 
-    if (cart.length === 0) {
-      html = `
+  if (cart.length === 0) {
+    html = `
       <div style="
-
-      background:white;
-
-      padding:80px;
-
-      border-radius:15px;
-
-      text-align:center;
-
-      box-shadow:0 5px 15px rgba(0,0,0,.08);
-
+          background:white;
+          padding:80px;
+          border-radius:15px;
+          text-align:center;
+          box-shadow:0 5px 15px rgba(0,0,0,.08);
       ">
+          <h2>Giỏ hàng đang trống</h2>
+          <br>
 
-      <h2>🛒 Giỏ hàng đang trống</h2>
-
-      <br>
-
-      <a href="products.html"
-
-      style="
-
-      display:inline-block;
-
-      padding:15px 30px;
-
-      background:#1b5e20;
-
-      color:white;
-
-      text-decoration:none;
-
-      border-radius:10px;
-
-      ">
-
-      Tiếp tục mua sắm
-
-      </a>
+          <a href="products.html"
+             style="
+               display:inline-block;
+               padding:15px 30px;
+               background:#1b5e20;
+               color:white;
+               text-decoration:none;
+               border-radius:10px;
+             ">
+              Tiếp tục mua sắm
+          </a>
 
       </div>
+    `;
+  }
 
-      `;
-    }
+  document.getElementById("cartItems").innerHTML = html;
 
-    document.getElementById("cartItems").innerHTML = html;
+  document.getElementById("total").innerHTML =
+    "Tổng tiền: " + total.toLocaleString("vi-VN") + " đ";
 
-    // document.getElementById("total").innerHTML = "Total: $" + total.toFixed(2);
-    document.getElementById("total").innerHTML =
-      "Tổng tiền: " + total.toLocaleString("vi-VN") + " đ";
-  });
+  if (typeof updateCartCount === "function") {
+    updateCartCount();
+  }
+}
 
 function checkout() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   if (cart.length === 0) {
-    // alert("Giỏ hàng đang trống");
     Swal.fire({
       icon: "warning",
       title: "Giỏ hàng trống",
       text: "Vui lòng thêm sản phẩm trước khi thanh toán.",
       confirmButtonColor: "#1b5e20",
     });
+
     return;
   }
 
@@ -140,105 +128,69 @@ function checkout() {
 
   Swal.fire({
     icon: "success",
-    title: "Đặt hàng thành công 🎉",
+    title: "Đặt hàng thành công ",
     text: "Cảm ơn bạn đã mua hàng tại Sunny Coffee!",
     confirmButtonColor: "#1b5e20",
+    fontSize: "10px",
   }).then(() => {
     location.href = "orders.html";
   });
 }
 
-// function removeItem(id) {
-//   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-//   cart = cart.filter((item) => item.id !== id);
-//   localStorage.setItem("cart", JSON.stringify(cart));
-//   location.reload();
-// }
-
-// function removeItem(id) {
-//   Swal.fire({
-//     title: "Xóa sản phẩm?",
-//     text: "Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng?",
-//     icon: "warning",
-//     showCancelButton: true,
-//     confirmButtonText: "Xóa",
-//     cancelButtonText: "Hủy",
-//     confirmButtonColor: "#d33",
-//     cancelButtonColor: "#1b5e20",
-//   }).then((result) => {
-//     if (result.isConfirmed) {
-//       let cart = JSON.parse(localStorage.getItem("cart")) || [];
-//       cart = cart.filter((item) => item.id !== id);
-//       localStorage.setItem("cart", JSON.stringify(cart));
-//       location.reload();
-//     }
-//   });
-// }
-
 function removeItem(id) {
   Swal.fire({
-    title: "🗑️ Delete Product?",
+    title: "Xoá Sản Phẩm?",
     html: `
       <p style="font-size:16px;color:#666;">
-        Are you sure you want to remove this product from the cart?
+        Bạn có chắc chắn muốn xoá sản phẩm này khỏi giỏ hàng?
       </p>
     `,
-    icon: "question",
+    // icon: "question",
     showCancelButton: true,
-    confirmButtonText: "Delete",
-    cancelButtonText: "Stay",
+    confirmButtonText: "Xoá",
+    cancelButtonText: "Giữ Lại ",
     reverseButtons: true,
     confirmButtonColor: "#d33",
     cancelButtonColor: "#1b5e20",
-    background: "#ffffff",
-    color: "#333",
+    background: "#fff",
     borderRadius: "18px",
     width: "430px",
-    showClass: {
-      popup: "animate__animated animate__zoomIn",
-    },
-
-    hideClass: {
-      popup: "animate__animated animate__zoomOut",
-    },
   }).then((result) => {
-    if (result.isConfirmed) {
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (!result.isConfirmed) return;
 
-      cart = cart.filter((item) => item.id !== id);
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-      localStorage.setItem("cart", JSON.stringify(cart));
+    cart = cart.filter((item) => item.id !== id);
 
-      Swal.fire({
-        toast: true,
-        icon: "success",
-        title: "Deleted!",
-        position: "top-end",
-        text: "Xoá sản phẩm khỏi giỏi hàng",
-        timer: 1000,
-        showConfirmButton: false,
-        timerProgressBar: true,
-      }).then(() => {
-        location.reload();
-      });
-    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    renderCart();
+
+    Swal.fire({
+      toast: true,
+      position: "top-end",
+      icon: "success",
+      title: "Đã xóa sản phẩm",
+      timer: 1000,
+      showConfirmButton: false,
+    });
   });
 }
 
 function changeQuantity(id, value) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  const item = cart.find((p) => p.id === id);
+  const item = cart.find((i) => i.id === id);
 
-  if (item) {
-    item.quantity += value;
+  if (!item) return;
 
-    if (item.quantity <= 0) {
-      cart = cart.filter((p) => p.id !== id);
-    }
+  item.quantity += value;
+
+  if (item.quantity <= 0) {
+    cart = cart.filter((i) => i.id !== id);
   }
 
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  location.reload();
+  renderCart();
 }

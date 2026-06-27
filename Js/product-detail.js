@@ -1,11 +1,13 @@
 const id = new URLSearchParams(location.search).get("id");
 
 let quantity = 1;
+let productData;
 
 fetch("data/products.json")
   .then((res) => res.json())
   .then((products) => {
     const product = products.find((p) => p.id == id);
+    productData = product;
 
     document.getElementById("productDetail").innerHTML = `
 
@@ -13,7 +15,7 @@ fetch("data/products.json")
 
 <div class="image-box">
 
-<img id="mainImage" src="${product.image}">
+<img id="mainImage" src="${product.image}" class="main-image">
 
 <div class="thumb-list">
 
@@ -44,7 +46,7 @@ ${product.description}
 
 </p>
 
-<div class="price">
+<div class="price" id="price">
 
 ${product.price.toLocaleString("vi-VN")} đ
 
@@ -64,7 +66,7 @@ ${product.price.toLocaleString("vi-VN")} đ
 
 onclick="addToCart(${product.id})">
 
-🛒 Thêm vào giỏ hàng
+Thêm vào giỏ hàng
 
 </button>
 
@@ -84,10 +86,19 @@ onclick="addToCart(${product.id})">
 `;
   });
 
+// function plus() {
+//   quantity++;
+
+//   document.getElementById("qty").innerHTML = quantity;
+// }
+
 function plus() {
   quantity++;
 
   document.getElementById("qty").innerHTML = quantity;
+
+  document.getElementById("price").innerHTML =
+    (productData.price * quantity).toLocaleString("vi-VN") + " đ";
 }
 
 function minus() {
@@ -95,6 +106,9 @@ function minus() {
     quantity--;
 
     document.getElementById("qty").innerHTML = quantity;
+
+    document.getElementById("price").innerHTML =
+      (productData.price * quantity).toLocaleString("vi-VN") + " đ";
   }
 }
 

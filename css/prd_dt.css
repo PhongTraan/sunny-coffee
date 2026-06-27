@@ -9,6 +9,14 @@ body {
   background: #fafafa;
 }
 
+.main-image {
+  width: 450px;
+
+  height: 550px;
+
+  object-fit: cover;
+}
+
 .shop-header {
   height: 70px;
 
@@ -110,7 +118,7 @@ body {
 }
 
 .price {
-  font-size: 20px;
+  font-size: 17px;
 
   color: #1b5e20;
 
