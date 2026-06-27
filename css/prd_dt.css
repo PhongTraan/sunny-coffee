@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fafafa;
+}
+
+.shop-header {
+  height: 70px;
+
+  background: #1c5b2d;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 0 60px;
+}
+
+.shop-header h1 {
+  color: white;
+}
+
+.shop-header nav a {
+  color: white;
+
+  margin-left: 30px;
+
+  text-decoration: none;
+}
+
+.detail-wrapper {
+  width: 1200px;
+
+  margin: 40px auto;
+
+  display: grid;
+
+  grid-template-columns: 520px 1fr;
+
+  gap: 60px;
+}
+
+.image-box img {
+  width: 100%;
+
+  border-radius: 18px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.thumb-list {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.thumb-list img {
+  width: 80px;
+
+  height: 80px;
+
+  border-radius: 10px;
+
+  object-fit: cover;
+
+  cursor: pointer;
+
+  border: 2px solid transparent;
+
+  transition: 0.3s;
+}
+
+.thumb-list img:hover {
+  border-color: #1b5e20;
+}
+
+.category {
+  color: #1b5e20;
+
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+.product-title {
+  font-size: 35px;
+
+  margin-bottom: 20px;
+
+  color: #222;
+}
+
+.description {
+  font-size: 13px;
+
+  line-height: 30px;
+
+  color: #666;
+
+  margin-bottom: 30px;
+}
+
+.price {
+  font-size: 20px;
+
+  color: #1b5e20;
+
+  font-weight: bold;
+
+  margin-bottom: 25px;
+}
+
+.qty-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+.qty-box button {
+  width: 40px;
+
+  height: 40px;
+
+  font-size: 20px;
+
+  border: none;
+
+  background: #ececec;
+
+  cursor: pointer;
+
+  border-radius: 8px;
+}
+
+.qty {
+  font-size: 22px;
+
+  width: 40px;
+
+  text-align: center;
+}
+
+.cart-btn {
+  width: 100%;
+
+  padding: 18px;
+
+  background: #1b5e20;
+
+  color: white;
+
+  font-size: 16px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.cart-btn:hover {
+  background: #2e7d32;
+}
+
+.info {
+  margin-top: 35px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #ddd;
+
+  color: #666;
+
+  line-height: 35px;
+}

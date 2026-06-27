@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="css/cart.css" />
+  </head>
+  <body>
+    <header class="shop-header">
+      <h1>🛒 Giỏ hàng</h1>
+
+      <nav>
+        <a href="products.html">Product</a>
+        <a href="orders.html">Order</a>
+      </nav>
+    </header>
+
+    <div class="cart-container">
+      <div id="cartItems"></div>
+
+      <div class="cart-summary">
+        <h2 id="total">Tổng tiền: 0đ</h2>
+
+        <button onclick="checkout()" class="checkout-btn">Thanh toán</button>
+      </div>
+    </div>
+
+    <script src="Js/cart.js"></script>
+  </body>
+</html>
