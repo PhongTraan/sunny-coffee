@@ -115,7 +115,13 @@ function checkout() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   if (cart.length === 0) {
-    alert("Giỏ hàng đang trống");
+    // alert("Giỏ hàng đang trống");
+    Swal.fire({
+      icon: "warning",
+      title: "Giỏ hàng trống",
+      text: "Vui lòng thêm sản phẩm trước khi thanh toán.",
+      confirmButtonColor: "#1b5e20",
+    });
     return;
   }
 
@@ -132,29 +138,91 @@ function checkout() {
 
   localStorage.removeItem("cart");
 
-  alert("Đặt hàng thành công");
-
-  location.href = "orders.html";
+  Swal.fire({
+    icon: "success",
+    title: "Đặt hàng thành công 🎉",
+    text: "Cảm ơn bạn đã mua hàng tại Sunny Coffee!",
+    confirmButtonColor: "#1b5e20",
+  }).then(() => {
+    location.href = "orders.html";
+  });
 }
 
+// function removeItem(id) {
+//   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+//   cart = cart.filter((item) => item.id !== id);
+//   localStorage.setItem("cart", JSON.stringify(cart));
+//   location.reload();
+// }
+
+// function removeItem(id) {
+//   Swal.fire({
+//     title: "Xóa sản phẩm?",
+//     text: "Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng?",
+//     icon: "warning",
+//     showCancelButton: true,
+//     confirmButtonText: "Xóa",
+//     cancelButtonText: "Hủy",
+//     confirmButtonColor: "#d33",
+//     cancelButtonColor: "#1b5e20",
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+//       let cart = JSON.parse(localStorage.getItem("cart")) || [];
+//       cart = cart.filter((item) => item.id !== id);
+//       localStorage.setItem("cart", JSON.stringify(cart));
+//       location.reload();
+//     }
+//   });
+// }
+
 function removeItem(id) {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  Swal.fire({
+    title: "🗑️ Delete Product?",
+    html: `
+      <p style="font-size:16px;color:#666;">
+        Are you sure you want to remove this product from the cart?
+      </p>
+    `,
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonText: "Delete",
+    cancelButtonText: "Stay",
+    reverseButtons: true,
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#1b5e20",
+    background: "#ffffff",
+    color: "#333",
+    borderRadius: "18px",
+    width: "430px",
+    showClass: {
+      popup: "animate__animated animate__zoomIn",
+    },
 
-  cart = cart.filter((item) => item.id !== id);
+    hideClass: {
+      popup: "animate__animated animate__zoomOut",
+    },
+  }).then((result) => {
+    if (result.isConfirmed) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  localStorage.setItem("cart", JSON.stringify(cart));
+      cart = cart.filter((item) => item.id !== id);
 
-  location.reload();
-}
+      localStorage.setItem("cart", JSON.stringify(cart));
 
-function removeItem(id) {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  cart = cart.filter((item) => item.id !== id);
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-
-  location.reload();
+      Swal.fire({
+        toast: true,
+        icon: "success",
+        title: "Deleted!",
+        position: "top-end",
+        text: "Xoá sản phẩm khỏi giỏi hàng",
+        timer: 1000,
+        showConfirmButton: false,
+        timerProgressBar: true,
+      }).then(() => {
+        location.reload();
+      });
+    }
+  });
 }
 
 function changeQuantity(id, value) {

@@ -124,5 +124,13 @@ function addToCart(id) {
 
   updateCartCount();
 
-  alert("Đã thêm vào giỏ hàng");
+  Swal.fire({
+    toast: true,
+    position: "top-end",
+    icon: "success",
+    title: "Đã thêm vào giỏ hàng",
+    showConfirmButton: false,
+    timer: 800,
+    timerProgressBar: true,
+  });
 }

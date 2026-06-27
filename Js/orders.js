@@ -114,12 +114,32 @@ fetch("data/products.json")
     document.getElementById("orders").innerHTML = html;
   });
 
+// function deleteOrder(id) {
+//   let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+//   orders = orders.filter((order) => order.id !== id);
+
+//   localStorage.setItem("orders", JSON.stringify(orders));
+
+//   location.reload();
+// }
+
 function deleteOrder(id) {
-  let orders = JSON.parse(localStorage.getItem("orders")) || [];
-
-  orders = orders.filter((order) => order.id !== id);
-
-  localStorage.setItem("orders", JSON.stringify(orders));
-
-  location.reload();
+  Swal.fire({
+    title: "Xóa Đơn Hàng?",
+    text: "Bạn có chắc muốn xóa đơn hàng này không?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Xóa",
+    cancelButtonText: "Hủy",
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#1b5e20",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      let orders = JSON.parse(localStorage.getItem("orders")) || [];
+      orders = orders.filter((order) => order.id !== id);
+      localStorage.setItem("orders", JSON.stringify(orders));
+      location.reload();
+    }
+  });
 }
