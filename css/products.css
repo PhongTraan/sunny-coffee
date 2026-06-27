@@ -59,13 +59,14 @@ main {
 }
 
 .category-banner h2 {
-  font-size: 32px;
+  font-size: 30px;
 
   margin-bottom: 10px;
 }
 
 .category-banner p {
   opacity: 0.85;
+  font-size: 15px;
 }
 
 .view-all-btn {

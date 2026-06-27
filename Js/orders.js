@@ -72,25 +72,31 @@ fetch("data/products.json")
 
     <div class="order-actions">
 
-        ${
-          order.status !== "Hoàn thành"
-            ? `
+    ${
+      order.status !== "Hoàn thành"
+        ? `
             <button
                 class="complete-btn"
                 onclick="completeOrder(${order.id})">
                 Hoàn thành
             </button>
-            `
-            : ""
-        }
+          `
+        : `
+            <button
+                class="print-btn"
+                onclick="printInvoice(${order.id})">
+                In hóa đơn
+            </button>
+          `
+    }
 
-        <button
-            class="delete-order-btn"
-            onclick="deleteOrder(${order.id})">
-            Xóa
-        </button>
+    <button
+        class="delete-order-btn"
+        onclick="deleteOrder(${order.id})">
+        Xóa
+    </button>
 
-    </div>
+</div>
 
 </div>
 
@@ -201,4 +207,121 @@ function completeOrder(id) {
       });
     }
   });
+}
+
+function printInvoice(orderId) {
+  const order = orders.find((o) => o.id === orderId);
+
+  if (!order) return;
+
+  fetch("data/products.json")
+    .then((res) => res.json())
+    .then((products) => {
+      let total = 0;
+      let rows = "";
+
+      order.items.forEach((item) => {
+        const product = products.find((p) => p.id === item.id);
+
+        if (!product) return;
+
+        const subTotal = product.price * item.quantity;
+
+        total += subTotal;
+
+        rows += `
+          <tr>
+            <td>${product.name}</td>
+            <td>${item.quantity}</td>
+            <td>${product.price.toLocaleString("vi-VN")} đ</td>
+            <td>${subTotal.toLocaleString("vi-VN")} đ</td>
+          </tr>
+        `;
+      });
+
+      const win = window.open("", "_blank");
+
+      win.document.write(`
+        <html>
+
+        <head>
+
+          <title>Sunny Coffee - Invoice #${order.id}</title>
+
+          <style>
+
+            body{
+              font-family:Arial;
+              padding:40px;
+            }
+
+            h1{
+              text-align:center;
+            }
+
+            table{
+              width:100%;
+              border-collapse:collapse;
+              margin-top:30px;
+            }
+
+            th,td{
+              border:1px solid #ccc;
+              padding:10px;
+              text-align:center;
+            }
+
+            .total{
+              margin-top:30px;
+              text-align:right;
+              font-size:20px;
+              font-weight:bold;
+            }
+
+          </style>
+
+        </head>
+
+        <body>
+
+          <h1>☕ Sunny Coffee</h1>
+
+          <h3>Mã đơn: ${order.id}</h3>
+
+          <p>Ngày đặt: ${order.date}</p>
+
+          <table>
+
+            <tr>
+
+              <th>Sản phẩm</th>
+
+              <th>SL</th>
+
+              <th>Đơn giá</th>
+
+              <th>Thành tiền</th>
+
+            </tr>
+
+            ${rows}
+
+          </table>
+
+          <div class="total">
+
+            Tổng thanh toán:
+            ${total.toLocaleString("vi-VN")} đ
+
+          </div>
+
+        </body>
+
+        </html>
+      `);
+
+      win.document.close();
+
+      win.print();
+    });
 }
