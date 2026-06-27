@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "name": "Bánh Thiên Nga",
+    "price": 575000,
+    "image": "images/b1.jpg",
+    "category": "banh-flan-gato",
+    "categoryName": "Bánh Flan Gato",
+    "description": "Bánh Flan Gato là sự giao thoa tuyệt vời giữa lớp flan truyền thống béo mịn và cốt bông lan chocolate đắng nhẹ, mềm xốp. Vị ngọt dịu quyện cùng hương thơm trứng sữa nồng nàn tạo nên sức hút khó cưỡng. Điểm xuyết dâu tây tươi mọng, bánh mang đến trải nghiệm hài hòa, là lựa chọn chân ái cho mọi lứa tuổi."
+  },
+  {
+    "id": 2,
+    "name": "Harvest Bloom",
+    "price": 535000,
+    "image": "images/a11.jpg",
+    "category": "banh-flan-gato",
+    "categoryName": "Bánh Flan Gato",
+    "description": "Harvest Bloom"
+  },
+  {
+    "id": 1,
+    "name": "Bánh Thiên Nga",
+    "price": 575000,
+    "image": "images/b2.jpg",
+    "category": "banh-flan-gato",
+    "categoryName": "Bánh Flan Gato",
+    "description": "Bánh Flan Gato là sự giao thoa tuyệt vời giữa lớp flan truyền thống béo mịn và cốt bông lan chocolate đắng nhẹ, mềm xốp. Vị ngọt dịu quyện cùng hương thơm trứng sữa nồng nàn tạo nên sức hút khó cưỡng. Điểm xuyết dâu tây tươi mọng, bánh mang đến trải nghiệm hài hòa, là lựa chọn chân ái cho mọi lứa tuổi."
+  },
+  {
+    "id": 2,
+    "name": "Harvest Bloom",
+    "price": 535000,
+    "image": "images/a11.jpg",
+    "category": "banh-flan-gato",
+    "categoryName": "Bánh Flan Gato",
+    "description": "Harvest Bloom"
+  },
+  {
+    "id": 3,
+    "name": "Bánh Thiên Nga",
+    "price": 575000,
+    "image": "images/b3.jpg",
+    "category": "banh-flan-gato",
+    "categoryName": "Bánh Flan Gato",
+    "description": "Bánh Flan Gato là sự giao thoa tuyệt vời giữa lớp flan truyền thống béo mịn và cốt bông lan chocolate đắng nhẹ, mềm xốp. Vị ngọt dịu quyện cùng hương thơm trứng sữa nồng nàn tạo nên sức hút khó cưỡng. Điểm xuyết dâu tây tươi mọng, bánh mang đến trải nghiệm hài hòa, là lựa chọn chân ái cho mọi lứa tuổi."
+  },
+  {
+    "id": 4,
+    "name": "Harvest Bloom",
+    "price": 535000,
+    "image": "images/b4.jpg",
+    "category": "banh-flan-gato",
+    "categoryName": "Bánh Flan Gato",
+    "description": "Harvest Bloom"
+  },
+  {
+    "id": 5,
+    "name": "Bánh Thiên Nga",
+    "price": 575000,
+    "image": "images/b5.jpg",
+    "category": "banh-flan-gato",
+    "categoryName": "Bánh Flan Gato",
+    "description": "Bánh Flan Gato là sự giao thoa tuyệt vời giữa lớp flan truyền thống béo mịn và cốt bông lan chocolate đắng nhẹ, mềm xốp. Vị ngọt dịu quyện cùng hương thơm trứng sữa nồng nàn tạo nên sức hút khó cưỡng. Điểm xuyết dâu tây tươi mọng, bánh mang đến trải nghiệm hài hòa, là lựa chọn chân ái cho mọi lứa tuổi."
+  },
+  {
+    "id": 6,
+    "name": "Harvest Bloom",
+    "price": 535000,
+    "image": "images/b6.jpg",
+    "category": "banh-flan-gato",
+    "categoryName": "Bánh Flan Gato",
+    "description": "Harvest Bloom"
+  },
+  {
+    "id": 7,
+    "name": "Mousse Kiwi",
+    "price": 425000,
+    "image": "images/a12.jpg",
+    "category": "mousse",
+    "categoryName": "Bánh Mousse",
+    "description": "Mousse Kiwi"
+  }
+]
