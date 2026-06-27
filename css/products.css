@@ -184,3 +184,31 @@ main {
 .detail-btn:hover {
   background: #2e7d32;
 }
+
+.search-box {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.search-box input {
+  width: 100%;
+
+  padding: 16px 20px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.search-box input:focus {
+  border-color: #1b5e20;
+
+  box-shadow: 0 0 8px rgba(27, 94, 32, 0.2);
+}
