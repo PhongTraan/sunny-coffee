@@ -1,0 +1,65 @@
+  [
+    {
+      "id": 1,
+      "name": "Bánh Thiên Nga",
+      "price": 575000,
+      "image": "images/b1.jpg",
+      "category": "banh-flan-gato",
+      "categoryName": "Bánh Flan Gato",
+      "description": "Bánh Thiên Nga là sự kết hợp hài hòa giữa lớp flan mềm mịn và cốt bánh gato chocolate xốp nhẹ. Hương vị béo ngậy của sữa, vị ngọt thanh cùng dâu tây tươi trang trí tạo nên chiếc bánh vừa đẹp mắt vừa thơm ngon. Phù hợp cho các buổi tiệc sinh nhật, kỷ niệm hoặc làm món quà ý nghĩa dành tặng người thân."
+    },
+    {
+      "id": 2,
+      "name": "Harvest Bloom",
+      "price": 535000,
+      "image": "images/a11.jpg",
+      "category": "banh-flan-gato",
+      "categoryName": "Bánh Flan Gato",
+      "description": "Harvest Bloom mang phong cách hiện đại với lớp kem tươi mịn màng, cốt bánh mềm xốp và hương vani dịu nhẹ. Bánh được trang trí tinh tế bằng trái cây tươi theo mùa, mang đến cảm giác thanh mát và ngọt ngào. Đây là lựa chọn lý tưởng cho những buổi gặp gỡ gia đình hoặc tiệc trà cuối tuần."
+    },
+    {
+      "id": 3,
+      "name": "Bánh Thiên Nga",
+      "price": 575000,
+      "image": "images/b2.jpg",
+      "category": "banh-flan-gato",
+      "categoryName": "Bánh Flan Gato",
+      "description": "Phiên bản Bánh Thiên Nga nổi bật với lớp kem phủ mượt mà, cốt bánh chocolate mềm ẩm và hương cacao thơm nhẹ. Từng lớp bánh hòa quyện cùng flan béo ngậy tạo nên hương vị cân bằng, không quá ngọt. Sản phẩm thích hợp cho những dịp đặc biệt hoặc làm món tráng miệng sang trọng."
+    },
+    {
+      "id": 4,
+      "name": "Harvest Bloom",
+      "price": 535000,
+      "image": "images/b4.jpg",
+      "category": "banh-flan-gato",
+      "categoryName": "Bánh Flan Gato",
+      "description": "Harvest Bloom là chiếc bánh mang vẻ đẹp nhẹ nhàng với lớp kem tươi mịn, cốt gato mềm và vị ngọt thanh. Mỗi chiếc bánh đều được hoàn thiện thủ công, kết hợp cùng trái cây tươi giúp hương vị thêm cân bằng. Đây là món quà tuyệt vời cho sinh nhật, lễ kỷ niệm hoặc các dịp sum họp."
+    },
+    {
+      "id": 5,
+      "name": "Bánh Thiên Nga",
+      "price": 575000,
+      "image": "images/b5.jpg",
+      "category": "banh-flan-gato",
+      "categoryName": "Bánh Flan Gato",
+      "description": "Bánh Thiên Nga chinh phục thực khách bởi lớp flan mịn tan trong miệng kết hợp cùng cốt bánh chocolate mềm xốp. Hương vị đậm đà nhưng không ngấy, điểm nhấn là lớp kem tươi và trái cây trang trí bắt mắt. Chiếc bánh mang đến trải nghiệm ngọt ngào cho mọi bữa tiệc."
+    },
+    {
+      "id": 6,
+      "name": "Harvest Bloom",
+      "price": 535000,
+      "image": "images/b6.jpg",
+      "category": "banh-flan-gato",
+      "categoryName": "Bánh Flan Gato",
+      "description": "Harvest Bloom sở hữu thiết kế thanh lịch cùng lớp kem béo nhẹ và cốt bánh mềm mịn. Sự kết hợp giữa nguyên liệu tươi ngon và cách trang trí tinh tế tạo nên chiếc bánh vừa đẹp mắt vừa thơm ngon. Thích hợp dùng trong các dịp sinh nhật, tiệc gia đình hoặc làm quà tặng."
+    },
+    {
+      "id": 7,
+      "name": "Mousse Kiwi",
+      "price": 425000,
+      "image": "images/a12.jpg",
+      "category": "mousse",
+      "categoryName": "Bánh Mousse",
+      "description": "Mousse Kiwi được làm từ lớp mousse mềm mịn hòa quyện cùng vị chua ngọt tự nhiên của kiwi tươi. Cốt bánh mềm kết hợp với kem mousse mát lạnh mang đến cảm giác thanh nhẹ, dễ ăn và không gây ngấy. Đây là lựa chọn hoàn hảo cho những ai yêu thích các món tráng miệng trái cây tươi mát."
+    }
+  ]
